@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:new_widgets/view/screens/adaptive_screen.dart';
+import 'package:new_widgets/view/screens/clip_path_screen.dart';
 import 'package:new_widgets/view/screens/dark_theme_screen.dart';
+import 'package:new_widgets/view/screens/dotted_border_screen.dart';
+import 'package:new_widgets/view/screens/dotted_lines_screen.dart';
 import 'package:new_widgets/view/screens/geo_locator_screen.dart';
 import 'package:new_widgets/view/screens/google_map_polylines_screen.dart';
+import 'package:new_widgets/view/screens/listview_navigation_screen.dart';
 import 'package:new_widgets/view/screens/location_autocomplete_screen.dart';
 import 'package:new_widgets/view/screens/map_with_custom_marker_screen.dart';
+import 'package:new_widgets/view/screens/marquee_screen.dart';
 import 'package:new_widgets/view/screens/navigation_rail_screen.dart';
 import 'package:new_widgets/view/screens/interactive_viewer_screen.dart';
 import 'package:new_widgets/view/screens/intrinsic_height_screen.dart';
@@ -13,6 +18,7 @@ import 'package:new_widgets/view/screens/neumorphism_screen.dart';
 import 'package:new_widgets/view/screens/notch_nav_screen.dart';
 import 'package:new_widgets/view/screens/number_pagination_screen.dart';
 import 'package:new_widgets/view/screens/pagination_screen.dart';
+import 'package:new_widgets/view/screens/reorderable_listview_screen.dart';
 import 'package:new_widgets/view/screens/shader_mask_screen.dart';
 import 'package:new_widgets/view/screens/stepper_screen.dart';
 
@@ -117,6 +123,42 @@ class HomeScreen extends StatelessWidget {
                   color: Colors.pinkAccent.shade100,
                   onPressed: () {
                     Get.to(const GoogleMapPolylineScreen());
+                  }),
+              buildChipItems(
+                  label: 'Marquee',
+                  color: Colors.teal,
+                  onPressed: () {
+                    Get.to(const MarqueeScreen());
+                  }),
+              buildChipItems(
+                  label: 'Dotted Line',
+                  color: Colors.lightGreen,
+                  onPressed: () {
+                    Get.to(const DottedLinesScreen());
+                  }),
+              buildChipItems(
+                  label: 'Dotted Border',
+                  color: Colors.indigo,
+                  onPressed: () {
+                    Get.to(DottedBorderScreen());
+                  }),
+              buildChipItems(
+                  label: 'Reorderable Listview',
+                  color: Colors.orange,
+                  onPressed: () {
+                    Get.to(const ReorderableListviewScreen());
+                  }),
+              buildChipItems(
+                  label: 'Listview Navigation',
+                  color: Colors.pink,
+                  onPressed: () {
+                    Get.to(ListviewNavigationScreen());
+                  }),
+              buildChipItems(
+                  label: 'Clip Path',
+                  color: Colors.deepPurpleAccent,
+                  onPressed: () {
+                    Get.to(const ClipPathScreen());
                   }),
             ],
           )),
